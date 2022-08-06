@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<script>
+  //within curly brances, you always the need return statement
+  let myFunc1 = function(num1, num2) {
+    return num1 * num2
+  }
+
+  //for single statement, no return required if arrow function is used
+  let myFunc2 = (num1, num2) =>  num1 * num2
+  
+  //within curly braces, always use the return statement
+  let myFunc3 = ((num1, num2) => { return num1 * num2 })
+
+  //the following three do the same thing
+  var myFunc4 = function(data){return data.map(x => x*x)};
+  var myFunc5 = function(data){return data.map(x => { return x*x })};
+  var myFunc6 = (data) => data.map(x => x*x);
+
+  console.log(myFunc1(2,3));
+  console.log(myFunc2(4,3));
+  console.log(myFunc3(5,4));
+  console.log(myFunc4([1,2,5]));
+  console.log(myFunc5([6, 3]));
+  console.log(myFunc6([7, 5]));
+</script>
+
+</body>
+</html>
